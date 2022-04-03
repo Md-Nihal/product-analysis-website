@@ -2,8 +2,8 @@ import React from 'react';
 import Image from '../Image/best-headphone-in-bangladesh.jpg'
 const Home = () => {
     return (
-        <div className='d-flex mt-5'>
-
+        <div className=' mt-5'>
+            <div className='d-flex mt-5'>
             <div className='col-lg-7 p-5'>
                 <h1 className='text-4xl'>Be The <span className='font-bold text-5xl font-serif text-emerald-600'>KING</span></h1>
                 <h1 className='text-4xl'>Feel The <span className='font-bold text-5xl font-serif text-emerald-600'>SOUND</span></h1>
@@ -12,6 +12,14 @@ const Home = () => {
             </div >
             <div className='w-2/6 h-2/6 col-lg-5'>
                 <img src={Image} alt="" />
+            </div>
+            </div>
+            <div className='mt-5'>
+                <h1>Clients review</h1>
+                <div className='mt-3'>
+
+                </div>
+                <button className='bg-emerald-800 font-bold text-white py-2 px-3 rounded-md	'> View all review</button>
             </div>
         </div>
     );
