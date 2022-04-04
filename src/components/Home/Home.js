@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useReview from '../hooks/ViewReview';
 import Image from '../Image/best-headphone-in-bangladesh.jpg'
 import SingleReview from '../SingleReview/SingleReview';
@@ -27,7 +28,8 @@ const Home = () => {
                     ></SingleReview>)
                 }
                 </div>
-                <button className='bg-emerald-800 font-bold text-white py-2 px-3 rounded-md	'> View all review</button>
+                <Link to="/reviews"><button className='bg-emerald-800 font-bold text-white py-2 px-3 rounded-md	'> View all review</button></Link>
+                
             </div>
         </div>
     );
