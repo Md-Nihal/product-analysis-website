@@ -13,7 +13,9 @@ const Dashboard = () => {
             <h1>This is dashboard</h1>
             
             <div className='flex space-x-2 m-5'>
-            <LineChart width={500} height={300} data={chart}>
+                <div>
+                    <h5>Revenue vs Investment</h5>
+                <LineChart width={500} height={300} data={chart}>
                 <Line dataKey="investment"></Line>
                 <Line dataKey="sell"></Line>
                 <Line dataKey="revenue"></Line>
@@ -22,10 +24,12 @@ const Dashboard = () => {
                 <YAxis></YAxis>
 
             </LineChart>
-            
-            <BarChart
+                </div>
+                <div>
+                <h5>Revenue vs Investment</h5>
+                <BarChart
                 width={600}
-                height={300}
+                height={350}
                 data={chart}
                 margin={{
                     top: 5,
@@ -43,6 +47,10 @@ const Dashboard = () => {
                 <Bar dataKey="revenue" fill="#8884d8" />
                 <Bar dataKey="sell" fill="#85da4d" />
             </BarChart>
+                </div>
+            
+            
+            
             </div>
         </div>
 

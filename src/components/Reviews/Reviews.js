@@ -6,6 +6,7 @@ const Reviews = () => {
     const [reviews] = useReview();
     return (
         <div >
+            <h1>What our well-wisher say</h1>
             <div className='lol'>
                  {reviews.map(review => <SingleReview
             key={review.id}
