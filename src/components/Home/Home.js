@@ -1,6 +1,9 @@
 import React from 'react';
+import useReview from '../hooks/ViewReview';
 import Image from '../Image/best-headphone-in-bangladesh.jpg'
+import SingleReview from '../SingleReview/SingleReview';
 const Home = () => {
+    const [reviews] = useReview();
     return (
         <div className=' mt-5'>
             <div className='d-flex mt-5'>
@@ -16,8 +19,13 @@ const Home = () => {
             </div>
             <div className='mt-5'>
                 <h1>Clients review</h1>
-                <div className='mt-3'>
-
+                <div className='mt-3 d-flex'>
+                {
+                    reviews.slice(0,3).map(review => <SingleReview 
+                        key={review.id}
+                        review={review}
+                    ></SingleReview>)
+                }
                 </div>
                 <button className='bg-emerald-800 font-bold text-white py-2 px-3 rounded-md	'> View all review</button>
             </div>
